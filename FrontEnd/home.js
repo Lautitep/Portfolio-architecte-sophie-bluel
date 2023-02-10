@@ -7,7 +7,6 @@ fetch('http://localhost:5678/api/works')
     }
   })
   .then(function(data) {
-    console.log(data)
     data.forEach((project) => {
       const projects = `<figure class='${project.categoryId}'>
         <img crossorigin="anonymous" src="${project.imageUrl}" alt="${project.title}">
@@ -17,7 +16,7 @@ fetch('http://localhost:5678/api/works')
     });
   })
   .catch(function(err) {
-    // Une erreur est survenue
+    console.error('Error:', err)
   });
 
 const buttons = document.querySelectorAll(".btn-filter")

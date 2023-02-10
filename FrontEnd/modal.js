@@ -122,11 +122,6 @@ const addProject = (e) => {
         return res.json();
       }
     })
-    // .then(function(value) {
-    //     document
-    //       .getElementById("result")
-    //       .innerText = value.postData.text;
-    // })
     .catch((err) => console.log(err))
 }
 
